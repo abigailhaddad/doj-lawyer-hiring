@@ -1,5 +1,7 @@
 # DOJ Attorney Hiring: Postings, Hires, and the Shrinking Workforce
 
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/abigailhaddad/doj-lawyer-hiring/blob/main/doj_attorney_hiring.ipynb)
+
 Tracks DOJ series 0905 (General Attorney) attorneys using two public data sources: total headcount, actual hiring, departures, and job postings — before and after January 20, 2025.
 
 ## What the data shows
