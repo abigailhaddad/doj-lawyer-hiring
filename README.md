@@ -15,8 +15,7 @@ All three use OPM's four-digit occupational series codes. Series **0905** (Gener
 
 | Source | What it measures | Query method |
 |--------|-----------------|--------------|
-| OPM EHRI employment | Monthly headcount snapshot | DuckDB `hf://` — no download |
-| OPM EHRI accessions | Monthly new hires | DuckDB `hf://` — no download |
+| OPM EHRI | Monthly headcount snapshots, new hires (accessions), and derived separations | DuckDB `hf://` — no download |
 | USAJobs R2 mirror | Historical job postings | DuckDB HTTP — no download |
 
 ## Running the notebook
