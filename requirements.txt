@@ -1,6 +1,6 @@
 pandas
 pyarrow
-matplotlib
-requests
-huggingface_hub
+duckdb
+plotly
+kaleido
 jupyter
