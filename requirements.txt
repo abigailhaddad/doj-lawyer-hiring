@@ -1,0 +1,6 @@
+pandas
+pyarrow
+matplotlib
+requests
+huggingface_hub
+jupyter
