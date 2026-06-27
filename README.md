@@ -1,6 +1,6 @@
 # DOJ Attorney Hiring: Postings, Hires, and the Shrinking Workforce
 
-Connects three public data sources to track DOJ series 0905 (General Attorney) attorneys: total headcount, actual hiring, and job postings — before and after January 20, 2025.
+Tracks DOJ series 0905 (General Attorney) attorneys using two public data sources: total headcount, actual hiring, departures, and job postings — before and after January 20, 2025.
 
 ## What the data shows
 
@@ -18,8 +18,6 @@ All three use OPM's four-digit occupational series codes. Series **0905** (Gener
 | OPM EHRI employment | Monthly headcount snapshot | DuckDB `hf://` — no download |
 | OPM EHRI accessions | Monthly new hires | DuckDB `hf://` — no download |
 | USAJobs R2 mirror | Historical job postings | DuckDB HTTP — no download |
-
-Federal hiring typically takes 3–6 months from posting to start date. The notebook estimates the empirical lag from pre-2025 data using cross-correlation.
 
 ## Running the notebook
 
