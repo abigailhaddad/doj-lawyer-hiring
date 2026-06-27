@@ -29,6 +29,24 @@ jupyter notebook doj_attorney_hiring.ipynb
 
 No API keys required. All data is queried server-side — nothing is downloaded locally.
 
+## Division-level analysis (Part 6)
+
+The notebook also breaks out headcount and accessions by Main Justice division, filtering to DOJ's "Offices, Boards and Divisions" subelement (DJ01).
+
+EHRI doesn't label employees by division name — it uses a **Personnel Office Identifier (POI)**, a four-digit OPM code assigned to each operating office. We infer which division each POI represents from **duty-station fingerprints**: the cities where that POI's attorneys work. For example, POI 1036 has a notable Denver cluster that matches the Environment & Natural Resources Division's Rocky Mountain field office; POI 1817 has a Dallas office consistent with the Tax Division before its December 2025 dissolution.
+
+**These division assignments are estimates inferred from location patterns — they are not confirmed by OPM or DOJ and should be treated as such.**
+
+| POI  | Inferred Division | Key location signal |
+|------|-------------------|---------------------|
+| 1845 | Civil Division | Largest; scattered field offices |
+| 1818 | Civil Rights Division | Nearly all DC |
+| 1034 | Criminal Division | Miami / LA / Houston / Chicago |
+| 1036 | Env & Natural Resources (ENRD) | Denver field office |
+| 1830 | Antitrust Division | SF / NY / Chicago |
+| 1831 | Justice Management Division | Suburban DC (Merrifield VA) |
+| 1817 | Tax Division (dissolved Dec 2025) | Dallas field office |
+
 ## Data sources
 
 - **EHRI**: [`impactproject/opm-ehri-data`](https://huggingface.co/datasets/impactproject/opm-ehri-data) on HuggingFace
