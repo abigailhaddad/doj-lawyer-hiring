@@ -47,6 +47,14 @@ EHRI doesn't label employees by division name — it uses a **Personnel Office I
 | 1831 | Justice Management Division | Suburban DC (Merrifield VA) |
 | 1817 | Tax Division (dissolved Dec 2025) | Dallas field office |
 
+## USAJobs data methodology note
+
+The R2 mirror combines two parquet families: `historical_jobs_*.parquet` (from the USAJobs historical API, which always returns bureau-level `hiringAgencyName`) and `current_jobs_*.parquet` (from the current search API, which sometimes falls back to the department-level name when `OrganizationName` is null). The notebook deduplicates by `usajobsControlNumber`, preferring historical records and more specific agency names.
+
+A small number of jobs appear only in the current parquets and are absent from the historical API even after closing — the exact reason is unclear (extended announcements, pipeline gaps, or API indexing quirks). These retain the department-level agency name fallback. They are a small fraction of total postings and do not materially affect the DOJ 0905 counts.
+
+See [`abigailhaddad/usajobs_historical`](https://github.com/abigailhaddad/usajobs_historical) README for full details on the combining methodology.
+
 ## Data sources
 
 - **EHRI**: [`impactproject/opm-ehri-data`](https://huggingface.co/datasets/impactproject/opm-ehri-data) on HuggingFace
